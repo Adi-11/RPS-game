@@ -17,25 +17,61 @@
         <span>Paper</span>
         <span>Scissors</span>
       </h1>
-      <div class="score-container">
+      <div class="score">
         <h4>
           Score
         </h4>
-        <p id="score">0</p>
+        <p id="score">1</p>
       </div>
     </header>
 
     <main>
-      <button class="btn-ways"><img src="./images/icon-paper.svg" alt="paper"></button>
-      <button class="btn-ways"><img src="./images/icon-scissors.svg" alt="Scissors"></button>
-      <button class="btn-ways"><img src="./images/icon-rock.svg" alt="rock"></button>
+      <button class="btn-ways paper" data-choice="paper">
+        <span class="wrapper">
+          <img src="./images/icon-paper.svg" alt="paper">
+        </span>
+      </button>
+      <button class="btn-ways scissors" data-choice="scissor">
+        <span class="wrapper">
+        <img src="./images/icon-scissors.svg" alt="Scissors">
+      </span>
+      </button>
+      <button class="btn-ways rock" data-choice="rock">
+        <span class="wrapper">
+        <img src="./images/icon-rock.svg" alt="rock">
+      </span>
+      </button>
     </main>
 
     <button class="btn-rules">
       Rules
     </button>
-    
+  
   </div>
+  
+  <div class="selection">
+    <div>
+      <h2>You Picked</h2>
+      <button class="btn-ways paper">
+        <span class="wrapper">
+          <img src="./images/icon-paper.svg" alt="paper">
+          </span>
+      </button>
+    </div>
+    <div>
+      <p class="big-text">You <span id="win">Won</span></p>
+      <button class="btn" id="reset">Playagain</button>
+    </div>
+    <div>
+      <h2>The House Picked</h2>
+      <button class="btn-ways rock">
+        <span class="wrapper">
+        <img src="./images/icon-rock.svg" alt="rock">
+      </span>
+      </button>
+    </div>
+  </div>
+
 
   <script src="main.js"></script>
 </body>
