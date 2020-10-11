@@ -9,6 +9,9 @@ const houseSelect = document.getElementById
     ('houseSelect');
 
 const winner = document.getElementById('winner')
+const openbtn = document.getElementById('open')
+const closebtn = document.getElementById('close')
+const modal = document.getElementById('modal')
 
 
 let score = 0;
@@ -30,6 +33,14 @@ reset.addEventListener('click', () => {
     selection.style.display = 'none'
 })
 
+openbtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+})
+closebtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+})
+
+
 function checkWinner() {
     const computerChoice = pickRandomChoice();
 
@@ -42,11 +53,11 @@ function checkWinner() {
         // Draw
         winner.innerText = 'draw'
     } else if ((userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'rock' && computerChoice === 'scissors') || (userChoice === 'scissors' && computerChoice === 'paper')) {
-        maintainScore()
+        maintainScore(1)
         winner.innerText = 'win'
     } else {
         //user lost
-        // maintainScore(-1);
+        maintainScore(-1);
         winner.innerText = 'lost'
     }
     
@@ -56,8 +67,8 @@ function checkWinner() {
     
 }
 
-function maintainScore() {
-    score += 1
+function maintainScore(inc) {
+    score += inc
 
     scoreEl.innerText = score
 }
