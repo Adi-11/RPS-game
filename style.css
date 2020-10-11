@@ -171,17 +171,18 @@ button:focus {
 
 .selection {
   display: none;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  width: 800px;
+  width: 1000px;
   max-width: 100%;
   margin: 0 auto;
 }
 
 .selection .btn-ways {
   transform: scale(1.4);
-  margin: 50px;
+  margin: 50px 100px;
 }
 
 .big-text {
@@ -211,4 +212,18 @@ button:focus {
   border: none;
   transform: scale(2);
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .go-down{
+    order: 1;
+  }
+  .selection .btn-ways {
+    transform: scale(1);
+    margin: 50px 20px;
+  }
+  
+  .selection{
+    width: 500px;
+  }
 }
