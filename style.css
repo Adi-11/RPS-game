@@ -215,15 +215,15 @@ button:focus {
 }
 
 @media (max-width: 900px) {
-  .go-down{
+  .go-down {
     order: 1;
   }
   .selection .btn-ways {
     transform: scale(1);
     margin: 50px 20px;
   }
-  
-  .selection{
+
+  .selection {
     width: 500px;
   }
 }
